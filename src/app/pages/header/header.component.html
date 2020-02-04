@@ -1,10 +1,20 @@
 <div id="site-nav">
-  <p id="sn-login-info">
-    <em>嘿，欢迎来到jmall</em>
-    <a href="">请登录</a>
-    <a href="">免费注册</a>
-  </p>
-  <ul id="sn-quick-menu">
-    <li><div></div></li>
-  </ul>
+  <div class="sn-container">
+    <p id="sn-login-info">
+      <em>嘿，欢迎来到jmall</em>
+      <a routerLink="/login" class="sn-login" href="">请登录</a>
+      <a routerLink="/register" class="sn-register" href="">免费注册</a>
+    </p>
+    <ul id="sn-quick-menu" class="sn-quick-menu">
+      <li class="sn-myjmall"><div><a routerLink="/myjmall" href="">我的jmall<b></b></a></div></li>
+      <li class="sn-cart"><div><i class="iconfont gouwuche"></i>购物车</div></li>
+      <li class="sn-favorite"><div><a routerLink="/myjmall" href="">收藏夹<b></b></a></div></li>
+      <li class="sn-separator"></li>
+      <li class="sn-mobile"><div><a routerLink="/myjmall" href="">手机版</a></div></li>
+      <li class="sn-taobao"><div><a routerLink="/myjmall" href="">淘宝网</a></div></li>
+      <li class="sn-seller"><div><a routerLink="/myjmall" href="">商家支持<b></b></a></div></li>
+      <li class="sn-sitemap"><div><a routerLink="/myjmall" href="">网站导航</a></div></li>
+    </ul>
+
+  </div>
 </div>
