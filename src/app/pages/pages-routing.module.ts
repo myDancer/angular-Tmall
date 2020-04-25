@@ -3,16 +3,21 @@ import { NgModule } from '@angular/core';
 
 import { PagesComponent } from './pages.component';
 import { GoodsComponent } from './goods/goods.component';
+import { MainComponent } from './main/main.component';
 const routes: Routes = [{
   path: '',
   component: PagesComponent,
   children: [{
+    path: 'home',
+    component: MainComponent,
+  },
+  {
     path: 'goods',
     component: GoodsComponent,
   },
   {
     path: '',
-    redirectTo: 'goods',
+    redirectTo: 'home',
     pathMatch: 'full',
   }]
 }];
