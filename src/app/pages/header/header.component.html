@@ -6,14 +6,91 @@
       <a routerLink="/register" class="sn-register" href="">免费注册</a>
     </p>
     <ul id="sn-quick-menu" class="sn-quick-menu">
-      <li class="sn-myjmall"><div><a routerLink="/myjmall" href="">我的jmall<b></b></a></div></li>
-      <li class="sn-cart"><div><i class="iconfont gouwuche"></i>购物车</div></li>
-      <li class="sn-favorite"><div><a routerLink="/myjmall" href="">收藏夹<b></b></a></div></li>
+      <li class="sn-myjmall"><a routerLink="/myjmall" href="">我的jmall<b></b></a></li>
+      <li class="sn-cart"><div><i class="iconfont gouwuche"></i><a routerLink="/myjmall" href="">购物车</a></div></li>
+      <li class="sn-favorite">
+        <div class="sn-menu">
+          <a routerLink="/myjmall" href="">收藏夹<b></b></a>
+          <ul class="menu-bd">
+            <li><a routerLink="/myjmall" href="">收藏的宝贝</a></li>
+            <li><a routerLink="/myjmall" href="">收藏的店铺</a></li>
+          </ul>
+        </div>
+      </li>
       <li class="sn-separator"></li>
-      <li class="sn-mobile"><div><a routerLink="/myjmall" href="">手机版</a></div></li>
+      <li class="sn-mobile">
+        <i class="iconfont shouji"></i>
+        <a routerLink="/myjmall" href="">手机版</a>
+        <div class="sn-qrcode">
+          <b></b>
+          <img src="https://img.alicdn.com/tfs/TB1vJ0POwTqK1RjSZPhXXXfOFXa-175-215.png" alt="">
+        </div>
+      </li>
       <li class="sn-taobao"><div><a routerLink="/myjmall" href="">淘宝网</a></div></li>
-      <li class="sn-seller"><div><a routerLink="/myjmall" href="">商家支持<b></b></a></div></li>
-      <li class="sn-sitemap"><div><a routerLink="/myjmall" href="">网站导航</a></div></li>
+      <li class="sn-seller">
+        <div class="sn-menu">
+          <a routerLink="/myjmall" href="">商家支持<b></b></a>
+          <div class="menu-bd sn-seller-lazy">
+            <ul>
+              <li>
+                <h3>商家：</h3>
+                <a routerLink="/myjmall" href="">商家中心</a>
+                <a routerLink="/myjmall" href="">天猫规则</a>
+                <a routerLink="/myjmall" href="">商家入驻</a>
+                <a routerLink="/myjmall" href="">商家品控</a>
+                <a routerLink="/myjmall" href="">商家工具</a>
+              </li>
+              <li>
+                <h3>帮助：</h3>
+                <a routerLink="/myjmall" href="">帮助中心</a>
+                <a routerLink="/myjmall" href="">问商友</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </li>
+      <li class="sn-sitemap">
+        <div class="sn-menu">
+          <h3 class="menu-hd"><i class="iconfont liebiao"></i>网站导航<b></b></h3>
+          <div class="menu-bd sn-sitemap-lazy sn-sitemap-bd">
+            <div class="site-cont site-hot">
+              <h2>热点推荐<span>Hot</span></h2>
+              <ul class="site-list">
+                <li><a routerLink="/myjmall" href="">天猫超市</a></li>
+                <li><a routerLink="/myjmall" href="">天猫超市</a></li>
+                <li><a routerLink="/myjmall" href="">天猫超市</a></li>
+                <li><a routerLink="/myjmall" href="">天猫超市</a></li>
+                <li><a routerLink="/myjmall" href="">天猫超市</a></li>
+                <li><a routerLink="/myjmall" href="">天猫超市</a></li>
+                <li><a routerLink="/myjmall" href="">天猫超市</a></li>
+                <li><a routerLink="/myjmall" href="">天猫超市</a></li>
+                <li><a routerLink="/myjmall" href="">天猫超市</a></li>
+                <li><a routerLink="/myjmall" href="">天猫超市</a></li>
+              </ul>
+            </div>
+            <div class="site-cont site-market">
+              <h2>行业市场<span>Market</span></h2>
+              <ul class="site-list">
+                <li><a routerLink="/myjmall" href="">美妆</a></li>
+                <li><a routerLink="/myjmall" href="">美妆</a></li>
+                <li><a routerLink="/myjmall" href="">美妆</a></li>
+                <li><a routerLink="/myjmall" href="">美妆</a></li>
+                <li><a routerLink="/myjmall" href="">美妆</a></li>
+                <li><a routerLink="/myjmall" href="">美妆</a></li>
+              </ul>
+            </div>
+            <div class="site-cont site-help">
+              <h2>服务指南<span>Help</span></h2>
+              <ul class="site-list">
+                <li><a routerLink="/myjmall" href="">帮助中心</a></li>
+                <li><a routerLink="/myjmall" href="">品质保证</a></li>
+                <li><a routerLink="/myjmall" href="">特色服务</a></li>
+                <li><a routerLink="/myjmall" href="">7天退货</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </li>
     </ul>
 
   </div>

@@ -1,0 +1,26 @@
+
+.category-inner-con{
+  width: 1230px;
+  padding-right: 30px;
+  position: relative;
+  height: 0;
+  z-index: 100;
+  margin: 0 auto;
+  .category-type{
+    width: 200px;
+    float: left;
+    height: 36px;
+    color: #fff;
+    background-color: #FF0036;
+    position: absolute;
+    z-index: 100;
+    margin-top: -36px;
+    line-height: 36px;
+    .text{
+      display: inline-block;
+      font-size: 16px;
+      margin-left: 8px;
+      font-weight: 700;
+    }
+  }
+}
