@@ -1,10 +1,12 @@
-<div class="header">
-  <img class="logo-con" src="https://img.alicdn.com/tfs/TB1MaLKRXXXXXaWXFXXXXXXXXXX-480-260.png" alt="">
-  <div class="mall-search">
-    <div class="mall-search-input">
-      <input #searchInput (keyup.enter)="search(searchInput.value)" (input)="textChange($event)" id="searchInput" type="text"/>
-      <label *ngIf="showLabel" class="placeholder" for="searchInput">搜索 天猫 商品/品牌/店铺</label>
+<div class="search-wrapper">
+  <div class="search">
+    <img class="logo-con" src="https://img.alicdn.com/tfs/TB1MaLKRXXXXXaWXFXXXXXXXXXX-480-260.png" alt="">
+    <div class="mall-search">
+      <div class="mall-search-input">
+        <input #searchInput (keyup.enter)="search(searchInput.value)" (input)="textChange($event)" id="searchInput" type="text"/>
+        <label *ngIf="showLabel" class="placeholder" for="searchInput">搜索 天猫 商品/品牌/店铺</label>
+      </div>
+      <button class="search-btn">搜索</button>
     </div>
-    <button class="search-btn">搜索</button>
   </div>
 </div>
