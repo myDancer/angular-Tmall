@@ -1,6 +1,14 @@
 export interface DiscoverGoods {
-    title: string;
-    titleImg: string;
-    subtitle: string;
-    goods: {}[];
+    good: {
+        title: string;
+        titleImg: string;
+        subtitle: string;
+        goods: {}[];
+    },
+    random: {
+        title: string;
+        titleImg: string;
+        subtitle: string;
+        goods: {}[];
+    }
 }

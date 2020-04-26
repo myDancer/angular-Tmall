@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HomepageService } from '../../@core/mock/homepage.service';
 
 @Component({
   selector: 'app-main',
@@ -6,8 +7,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./main.component.css']
 })
 export class MainComponent implements OnInit {
-
-  constructor() { }
+  discoverGoods: any;
+  constructor(private homepageService: HomepageService) {
+    this.discoverGoods = this.homepageService.getDiscoverGoods();
+    console.log(this.discoverGoods);
+  }
 
   ngOnInit() {
   }

@@ -1,49 +1,18 @@
 <div class="goods-card">
   <h3 class="goods-hd">
-    <em>有好货</em>
-    <img src="https://img.alicdn.com/tfs/TB1tqpnegMPMeJjy1XcXXXpppXa-148-48.png" alt="" srcset="">
-    <p>与品质生活不期而遇</p>
+    <em>{{data.title}}</em>
+    <img [src]="data.titleImg" alt="" srcset="">
+    <p>{{data.subtitle}}</p>
   </h3>
   <ul class="goods-list">
-    <li routerLink="/goodsDetail">
-      <div class="img-wrapper"><img src="https://img.alicdn.com/tfscom/i1/1581756766/TB2TF0ch0zJ8KJjSspkXXbF7VXa_!!1581756766.jpg_180x180xzq90.jpg_.webp" alt="" srcset=""></div>
+    <li routerLink="/goodsDetail" *ngFor="let item of data.goods">
+      <div class="img-wrapper"><img [src]="item.img" alt="" srcset=""></div>
       <div class="info">
-        <h4>圣罗兰 口红礼盒</h4>
-        <p>多款色号多种选择，轻松打造出美丽的唇妆。</p>
-        <p class="extra">8人说好</p>
+        <h4>{{item.name}}</h4>
+        <p>{{item.describe}}</p>
+        <p class="extra">{{item.extra}}人说好</p>
       </div>
     </li>
-    <li routerLink="/goodsDetail">
-      <div class="img-wrapper"><img src="https://img.alicdn.com/tfscom/i1/1581756766/TB2TF0ch0zJ8KJjSspkXXbF7VXa_!!1581756766.jpg_180x180xzq90.jpg_.webp" alt="" srcset=""></div>
-      <div class="info">
-        <h4>圣罗兰 口红礼盒</h4>
-        <p>多款色号多种选择，轻松打造出美丽的唇妆。</p>
-        <p class="extra">8人说好</p>
-      </div>
-    </li>
-    <li routerLink="/goodsDetail">
-      <div class="img-wrapper"><img src="https://img.alicdn.com/tfscom/i1/1581756766/TB2TF0ch0zJ8KJjSspkXXbF7VXa_!!1581756766.jpg_180x180xzq90.jpg_.webp" alt="" srcset=""></div>
-      <div class="info">
-        <h4>圣罗兰 口红礼盒</h4>
-        <p>多款色号多种选择，轻松打造出美丽的唇妆。</p>
-        <p class="extra">8人说好</p>
-      </div>
-    </li>
-    <li routerLink="/goodsDetail">
-      <div class="img-wrapper"><img src="https://img.alicdn.com/tfscom/i1/1581756766/TB2TF0ch0zJ8KJjSspkXXbF7VXa_!!1581756766.jpg_180x180xzq90.jpg_.webp" alt="" srcset=""></div>
-      <div class="info">
-        <h4>圣罗兰 口红礼盒</h4>
-        <p>多款色号多种选择，轻松打造出美丽的唇妆。</p>
-        <p class="extra">8人说好</p>
-      </div>
-    </li>
-    <li routerLink="/goodsDetail">
-      <div class="img-wrapper"><img src="https://img.alicdn.com/tfscom/i1/1581756766/TB2TF0ch0zJ8KJjSspkXXbF7VXa_!!1581756766.jpg_180x180xzq90.jpg_.webp" alt="" srcset=""></div>
-      <div class="info">
-        <h4>圣罗兰 口红礼盒</h4>
-        <p>多款色号多种选择，轻松打造出美丽的唇妆。</p>
-        <p class="extra">8人说好</p>
-      </div>
-    </li>
+    
   </ul>
 </div>
