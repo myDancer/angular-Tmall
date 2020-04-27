@@ -1,5 +1,96 @@
+
+<app-search></app-search>
+<app-category></app-category>
 <div class="layer">
-  <div class="layer-inner">
+  <ul class="brand-list clearfix">
+    <li><a><img src="https://img.alicdn.com/tfs/TB1uIjaDAL0gK0jSZFtXXXQCXXa-492-340.jpg_310x310q100.jpg_.webp" alt=""></a></li>
+    <li class="big"><a><img src="https://img.alicdn.com/tfs/TB1go6eDAT2gK0jSZPcXXcKkpXa-986-340.jpg_620x10000q100.jpg_.webp" alt=""></a></li>
+    <li><a><img src="https://img.alicdn.com/tfs/TB1t1_dDAY2gK0jSZFgXXc5OFXa-492-340.jpg_310x310q100.jpg_.webp" alt=""></a></li>
+    <li><a><img src="https://img.alicdn.com/tfs/TB1DU2XDvb2gK0jSZK9XXaEgFXa-492-340.jpg_310x310q100.jpg_.webp" alt=""></a></li>
+  </ul>
+</div>
+<div class="layer">
+  <div class="brandWall clearfix">
+    <div class="brandWall-item" style="width: 234px;">
+      <div class="head">
+        <span class="cn">品牌闪购</span><span class="en">BRAND SALE</span>
+      </div>
+      <a href=""><img src="https://img.alicdn.com/tps/i4/TB17qddaOERMeJjSspiSuvZLFXa.jpg_400x400q100.jpg_.webp"></a>
+    </div>
+    <div class="brandWall-item">
+      <div class="head">
+        <span class="cn">聚名品</span><span class="en">LUXURY CHANNEL</span>
+      </div>
+      <a href=""><img src="https://img.alicdn.com/tps/i4/TB1fbhiawoQMeJjy0FnSuv8gFXa.jpg_620x10000q100.jpg_.webp"></a>
+    </div>
+    <div class="brandWall-item" style="width: 485px;">
+      <div class="head">
+        <span class="cn">品牌活动</span><span class="en">BRAND ACTIVITY</span>
+      </div>
+      <a href=""><img src="https://img.alicdn.com/tps/i4/TB1zjOwzuL2gK0jSZFmSuw7iXXa.jpg_620x10000q100.jpg_.webp"></a>
+    </div>
+  </div>
+</div>
+<div class="layer">
+  <div class="link-brand-list">
+    <ul class="clearfix">
+      <li class="link-brand-item" *ngFor="let item of brandList">
+        <div class="brand-img">
+          <img [src]="item.brandimg" alt="">
+        </div>
+        <div class="coupon-wrapper brand-mask">
+          <div class="coupon">
+            <span>{{item.coupon}}</span>
+          </div>
+          <div class="enter">
+            <span>点击进入</span>
+          </div>
+        </div>
+      </li>
+      <li class="refresh-btn">
+        <i class="iconfont rotate-icon"></i>
+        <span class="btn-text">换一批</span>
+      </li>
+    </ul>
+  </div>
+</div>
+<div class="layer">
+  <div class="beauty">
+    <h2 class="beauty-title"><span>美丽人生</span><span class="en">FASHION & BEAUTY</span></h2>
+    <div class="beauty-body">
+      <div class="big-banner-con-2">
+        <a>
+          <img src="https://img.alicdn.com/tfs/TB1aClEzKL2gK0jSZPhXXahvXXa-468-1236.jpg" alt="">
+          <div class="banner-detail">
+            <div class="left-title-wrap">
+              <span class="left-title">大牌男装</span>
+            </div>
+            <div class="right-title-wrap">
+              <div class="right-title-absolute">
+                <span class="right-title">潮牌首发</span>
+                <span class="right-title">联名潮T不只4折</span>
+              </div>
+            </div>
+          </div>
+          <div class="detail-wrap">
+            <img class="floor-arrow-big" src="https://img.alicdn.com/tfs/TB1IQBtXaagSKJjy0FbXXa.mVXa-68-68.png" alt="">
+          </div>
+        </a>
+      </div>
+      <div class="middle-column-con">
+        <a *ngFor="let item of beautyList">
+          <div class="floor-item-content-wrap">
+            <img class="floor-item-img" [src]="item.img" alt="">
+            <div class="floor-item-title">{{item.title}}</div>
+            <div class="floor-price">￥{{item.price}}</div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="layer">
+  <div class="layer-inner clearfix">
     <app-goods-card [data]="discoverGoods.good"></app-goods-card>
     <app-goods-card [data]="discoverGoods.random" class="right-card"></app-goods-card>
   </div>
