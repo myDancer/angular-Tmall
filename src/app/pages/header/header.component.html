@@ -53,39 +53,14 @@
         <div class="sn-menu">
           <h3 class="menu-hd"><i class="iconfont liebiao"></i>网站导航<b></b></h3>
           <div class="menu-bd sn-sitemap-lazy sn-sitemap-bd">
-            <div class="site-cont site-hot">
-              <h2>热点推荐<span>Hot</span></h2>
+            <div [ngClass]="['site-cont', navLink.css]" *ngFor="let navLink of navLinks">
+              <h2>{{navLink.title}}<span>{{navLink.subtitle}}</span></h2>
               <ul class="site-list">
-                <li><a routerLink="/myjmall" href="">天猫超市</a></li>
-                <li><a routerLink="/myjmall" href="">天猫超市</a></li>
-                <li><a routerLink="/myjmall" href="">天猫超市</a></li>
-                <li><a routerLink="/myjmall" href="">天猫超市</a></li>
-                <li><a routerLink="/myjmall" href="">天猫超市</a></li>
-                <li><a routerLink="/myjmall" href="">天猫超市</a></li>
-                <li><a routerLink="/myjmall" href="">天猫超市</a></li>
-                <li><a routerLink="/myjmall" href="">天猫超市</a></li>
-                <li><a routerLink="/myjmall" href="">天猫超市</a></li>
-                <li><a routerLink="/myjmall" href="">天猫超市</a></li>
-              </ul>
-            </div>
-            <div class="site-cont site-market">
-              <h2>行业市场<span>Market</span></h2>
-              <ul class="site-list">
-                <li><a routerLink="/myjmall" href="">美妆</a></li>
-                <li><a routerLink="/myjmall" href="">美妆</a></li>
-                <li><a routerLink="/myjmall" href="">美妆</a></li>
-                <li><a routerLink="/myjmall" href="">美妆</a></li>
-                <li><a routerLink="/myjmall" href="">美妆</a></li>
-                <li><a routerLink="/myjmall" href="">美妆</a></li>
-              </ul>
-            </div>
-            <div class="site-cont site-help">
-              <h2>服务指南<span>Help</span></h2>
-              <ul class="site-list">
-                <li><a routerLink="/myjmall" href="">帮助中心</a></li>
-                <li><a routerLink="/myjmall" href="">品质保证</a></li>
-                <li><a routerLink="/myjmall" href="">特色服务</a></li>
-                <li><a routerLink="/myjmall" href="">7天退货</a></li>
+                <li *ngFor="let item of navLink.links">
+                  <a style="position: relative;" [routerLink]="item.href" href="">{{item.linkname}}</a>
+                  <app-icon *ngIf="item.hot" background="#e7462c" color="#fff">H</app-icon>
+                  <app-icon *ngIf="item.new" background="#68be00" color="#fff">N</app-icon>
+                </li>
               </ul>
             </div>
           </div>

@@ -9,6 +9,7 @@ import { MainComponent } from './main/main.component';
 import { GoodsCardComponent } from './main/goods-card/goods-card.component';
 import{ SearchComponent } from './search/search.component';
 import{ CategoryComponent } from './category/category.component';
+import{ IconComponent } from './header/icon/icon.component';
 
 @NgModule({
   imports: [
@@ -22,7 +23,8 @@ import{ CategoryComponent } from './category/category.component';
     MainComponent,
     GoodsCardComponent,
     SearchComponent,
-    CategoryComponent
+    CategoryComponent,
+    IconComponent
   ],
 })
 export class PagesModule {

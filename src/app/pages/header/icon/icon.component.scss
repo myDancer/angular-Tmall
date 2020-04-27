@@ -1,0 +1,29 @@
+.header-icon{
+  width: 9px;
+  height: 8px;
+  line-height: 8px;
+  text-align: center;
+  position: relative;
+  top: -11px;
+  left: 0;
+  font-size: 0;
+  display: inline-block;
+  .text{
+    text-align: center;
+    font-size: 12px;
+    font-weight: 600;
+    display: inline-block;
+    transform: scale(0.6, 0.6);
+  }
+}
+.triangle{
+  width: 0;
+  height: 0;
+  border-top: 2px solid;
+  border-right: 3px solid transparent;
+  border-left: 0px solid transparent;
+  position: absolute;
+  transform: translateX(-50%);
+  left: 50%;
+  top: 100%;
+}

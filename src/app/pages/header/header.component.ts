@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HomepageService } from '../../@core/mock/homepage.service'
 
 @Component({
   selector: 'app-header',
@@ -6,8 +7,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-
-  constructor() { }
+  navLinks = [];
+  constructor(private homepageService: HomepageService) {
+    this.navLinks = homepageService.getNavLinks();
+    console.log(this.navLinks);
+  }
 
   ngOnInit() {
   }
