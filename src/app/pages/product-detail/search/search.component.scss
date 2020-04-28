@@ -1,0 +1,105 @@
+.header-search{
+    border-bottom: 1px solid #c8baaa;
+    background: #fff;
+}
+#headerCon {
+    width: 1190px;
+    margin: 0 auto;
+    height: 85px;
+    #mallLogo {
+        float: left;
+        width: 145px;
+        margin-top: 20px;
+        position: relative;
+        height: 30px;
+        a{
+            display: block;
+            img{
+                width: 100%;
+            }
+        }
+    }
+}
+#shopExtra {
+    float: left;
+    position: relative;
+    padding: 15px 0 0;
+    height: 50px;
+    .slogo {
+        background: -174px -30px no-repeat;
+        float: left;
+        padding: 0 10px;
+        height: 38px;
+        border-left: 1px solid #f0f0f0;
+        width: auto;
+        a {
+            height: 22px;
+            line-height: 19px;
+            overflow: hidden;
+            background-color: #fff;
+            font-size: 12px;
+            font-family: "\5b8b\4f53";
+            color: #333;
+            font-weight: 700;
+        }
+    }
+    .slogo-extraicon {
+        height: 25px;
+        width: 80px;
+        .ww-light {
+            overflow: hidden;
+            a {
+                height: 22px;
+                line-height: 19px;
+                overflow: hidden;
+                background-color: #fff;
+                font-size: 12px;
+                font-family: "\5b8b\4f53";
+                color: #333;
+                font-weight: 700;
+                background-position: -110px 0;
+                text-decoration: none!important;
+                width: 20px;
+                display: inline-block;
+                vertical-align: text-bottom;
+                background-image: url(//img.alicdn.com/tps/i1/T15AD7FFFaXXbJnvQ_-130-60.gif);
+                background-image: -webkit-image-set(url(//img.alicdn.com/tps/i1/T15AD7FFFaXXbJnvQ_-130-60.gif) 1x,url(//img.alicdn.com/tps/i4/T1Rsz7FPJaXXbZhKn7-520-240.gif) 4x);
+                span {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+#shop-info {
+    position: relative;
+    float: left;
+    width: 132px;
+    height: 38px;
+    font-weight: 400;
+    padding: 0 10px;
+    border-left: 1px dotted #f0f0f0;
+    .main-info {
+        overflow: hidden;
+        position: relative;
+        .shopdsr-item {
+            float: left;
+            color: #999;
+            width: 36px;
+            height: 36px;
+            position: relative;
+            .shopdsr-title {
+                text-align: center;
+                font-family: "\5b8b\4f53";
+            }
+        }
+        .shopdsr-score {
+            color: #ff0036;
+            padding-left: 5px;
+            height: 18px;
+            width: 31px;
+            position: relative;
+            overflow: hidden;
+        }
+    }
+}

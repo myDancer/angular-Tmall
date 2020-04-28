@@ -7,19 +7,22 @@
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
-          "style": "sass",
+          "style": "scss",
           "spec": false
         },
         "@schematics/angular:class": {
+          "style": "scss",
           "spec": false
         },
         "@schematics/angular:directive": {
+          "style": "scss",
           "spec": false
         },
         "@schematics/angular:guard": {
           "spec": false
         },
         "@schematics/angular:module": {
+          "style": "scss",
           "spec": false
         },
         "@schematics/angular:pipe": {

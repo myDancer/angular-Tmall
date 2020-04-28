@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { HomepageService } from '../../@core/mock/homepage.service'
+import { HomepageService } from '../../@core/mock/homepage.service';
 
 @Component({
   selector: 'app-header',

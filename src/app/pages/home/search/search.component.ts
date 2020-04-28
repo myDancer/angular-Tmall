@@ -7,9 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SearchComponent implements OnInit {
 
-  showLabel: Boolean = true;
-  searchText: String;
-  textChange (event: KeyboardEvent) {
+  showLabel = true;
+  searchText: string;
+  textChange(event: KeyboardEvent) {
     this.searchText =  (event.target as HTMLInputElement).value;
     if (this.searchText.length > 0) {
       this.showLabel = false;
@@ -17,7 +17,7 @@ export class SearchComponent implements OnInit {
       this.showLabel = true;
     }
   }
-  search (value) {
+  search(value) {
     console.log('enter', value);
   }
   constructor() { }
