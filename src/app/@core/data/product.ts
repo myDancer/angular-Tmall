@@ -17,3 +17,7 @@ export interface Goods {
   user: User;
   product: Product;
 }
+
+export abstract class productDetail {
+  abstract getProductDetail(id: string): Product;
+}
