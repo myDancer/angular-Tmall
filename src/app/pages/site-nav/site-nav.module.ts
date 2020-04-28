@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 
-import { HeaderComponent } from './header.component';
+import { SiteNavComponent } from './site-nav.component';
 import { IconComponent } from './icon/icon.component';
 
 @NgModule({
@@ -11,9 +11,9 @@ import { IconComponent } from './icon/icon.component';
     RouterModule
   ],
   declarations: [
-    HeaderComponent,
+    SiteNavComponent,
     IconComponent
   ],
-  exports: [HeaderComponent]
+  exports: [SiteNavComponent]
 })
-export class HeaderModule { }
+export class SiteNavModule { }

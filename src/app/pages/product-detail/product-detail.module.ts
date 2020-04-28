@@ -1,21 +1,21 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { HeaderModule } from '../header/header.module';
+import { SiteNavModule } from '../site-nav/site-nav.module';
 import { ProductDetailRoutingModule } from './product-detail-routing.module';
 
 import { ProductDetailComponent } from './product-detail.component';
-import { SearchComponent } from './search/search.component';
+import { HeaderComponent } from './header/header.component';
 
 @NgModule({
   imports: [
     CommonModule,
     ProductDetailRoutingModule,
-    HeaderModule
+    SiteNavModule
   ],
   declarations: [
     ProductDetailComponent,
-    SearchComponent
+    HeaderComponent
   ]
 })
 export class ProductDetailModule { }

@@ -2,12 +2,12 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
-import { HeaderModule } from './pages/header/header.module';
+import { SiteNavModule } from './pages/site-nav/site-nav.module';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './pages/home/home.component';
 import { GoodsCardComponent } from './pages/home/goods-card/goods-card.component';
-import { SearchComponent } from './pages/home/search/search.component';
+import { HeaderComponent } from './pages/home/header/header.component';
 import { CategoryComponent } from './pages/home/category/category.component';
 
 @NgModule({
@@ -15,13 +15,13 @@ import { CategoryComponent } from './pages/home/category/category.component';
     AppComponent,
     HomeComponent,
     GoodsCardComponent,
-    SearchComponent,
+    HeaderComponent,
     CategoryComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HeaderModule
+    SiteNavModule
   ],
   providers: [],
   bootstrap: [AppComponent]
