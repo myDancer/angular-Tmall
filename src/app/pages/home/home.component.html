@@ -1,4 +1,5 @@
 
+<app-header></app-header>
 <app-search></app-search>
 <app-category></app-category>
 <div class="layer">
@@ -78,10 +79,10 @@
         </a>
       </div>
       <div class="middle-column-con">
-        <a *ngFor="let item of beautyList">
+        <a *ngFor="let item of beautyList" [routerLink]="'/productDetail/'+item.id">
           <div class="floor-item-content-wrap">
-            <img class="floor-item-img" [src]="item.img" alt="">
-            <div class="floor-item-title">{{item.title}}</div>
+            <img class="floor-item-img" [src]="item.productImg" alt="">
+            <div class="floor-item-title">{{item.name}}</div>
             <div class="floor-price">￥{{item.price}}</div>
           </div>
         </a>
