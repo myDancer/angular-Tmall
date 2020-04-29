@@ -6,6 +6,7 @@ import { ProductDetailRoutingModule } from './product-detail-routing.module';
 
 import { ProductDetailComponent } from './product-detail.component';
 import { HeaderComponent } from './header/header.component';
+import { DetailComponent } from './detail/detail.component';
 
 @NgModule({
   imports: [
@@ -15,7 +16,8 @@ import { HeaderComponent } from './header/header.component';
   ],
   declarations: [
     ProductDetailComponent,
-    HeaderComponent
+    HeaderComponent,
+    DetailComponent
   ]
 })
 export class ProductDetailModule { }
