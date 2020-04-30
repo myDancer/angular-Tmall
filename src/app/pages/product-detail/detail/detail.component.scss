@@ -208,7 +208,7 @@
     line-height: 28px;
     outline: 0;
     cursor: pointer;
-    &:hover{
+    &:hover, &.check{
         border: 2px solid #FF0036;
         margin: -1px;
     }
@@ -235,7 +235,7 @@
     text-indent: -9999em;
     box-sizing: border-box;
     cursor: pointer;
-    &:hover{
+    &:hover, &.check{
         border: 2px solid #FF0036;
     }
 }

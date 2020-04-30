@@ -40,19 +40,19 @@
                     <dt class="tb-metatit">尺码</dt>
                     <dd>
                       <ul class="tm-clear J_TSaleProp">
-                        <li><button class="choose-btn" type="button">38</button></li>
-                        <li><button class="choose-btn" type="button">39</button></li>
-                        <li><button class="choose-btn" type="button">40</button></li>
-                        <li><button class="choose-btn" type="button">41</button></li>
-                        <li><button class="choose-btn" type="button">42</button></li>
+                        <li *ngFor="let item of sizes; index as i">
+                          <button (click)="chooseSize(item)" [ngClass]="{'choose-btn': true, 'check': i == chooseIndex}" type="button">{{item}}</button>
+                        </li>
                       </ul>
                     </dd>
                   </dl>
                   <dl class="tb-prop tm-sale-prop tm-clear tm-img-prop ">
                     <dt class="tb-metatit">颜色</dt>
                     <dd>
-                      <ul class="tm-clear J_TSaleProp tb-img     ">
-                        <li><button class="color-choose-btn" style="background:url(//img.alicdn.com/imgextra/i2/2269753886/TB2JIGEfl8lpuFjSspaXXXJKpXa_!!2269753886.jpg_40x40q90.jpg) center no-repeat;">5036立领藏青色</button></li>
+                      <ul class="tm-clear J_TSaleProp tb-img">
+                        <li *ngFor="let item of colors">
+                          <button (click)="chooseColor(index)" [ngClass]="{'color-choose-btn': true, 'check': i == chooseColorIndex}" [ngStyle]="{'background-image': 'url(' + item.productImg + ')'}">{{item.name}}</button>
+                        </li>
                       </ul>
                     </dd>
                   </dl>
