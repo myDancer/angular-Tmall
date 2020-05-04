@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { SiteNavModule } from './pages/site-nav/site-nav.module';
+// import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './pages/home/home.component';
@@ -21,7 +22,9 @@ import { CategoryComponent } from './pages/home/category/category.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    SiteNavModule
+    SiteNavModule,
+    // FormsModule,
+    // ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

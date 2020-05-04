@@ -40,7 +40,7 @@
                     <dt class="tb-metatit">尺码</dt>
                     <dd>
                       <ul class="tm-clear J_TSaleProp">
-                        <li><button class="choose-btn" type="button">38</button></li>
+                        <li *ngFor="let item of productDetail.sizes"><button (click)="checkSize(item)" class="choose-btn" type="button">{{item}}</button></li>
                         <li><button class="choose-btn" type="button">39</button></li>
                         <li><button class="choose-btn" type="button">40</button></li>
                         <li><button class="choose-btn" type="button">41</button></li>
@@ -60,7 +60,7 @@
                     <dt class="tb-metatit">数量</dt>
                     <dd id="J_Amount">
                       <span class="tb-amount-widget mui-amount-wrap">
-                        <input type="number" class="tb-text mui-amount-input" maxlength="8" title="请输入购买量">
+                        <input [(ngModel)]="cart.number" type="number" class="tb-text mui-amount-input" maxlength="8" title="请输入购买量">
                         <span class="mui-amount-btn">
                           <span></span>
                           <span></span>
@@ -74,7 +74,7 @@
                       <button class="buy-btn" id="J_LinkBuy" title="点击此按钮，到下一步确认购买信息。">立即购买</button>
                     </div>
                     <div class="tb-btn-basket tb-btn-sku">
-                      <button class="into-cart-btn" id="J_LinkBasket">
+                      <button class="into-cart-btn" id="J_LinkBasket" (click)="addToCart()">
                         加入购物车
                       </button>
                     </div>
