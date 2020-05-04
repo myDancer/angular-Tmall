@@ -71,7 +71,7 @@
                   </dl>
                   <div class="tb-action tm-clear">
                     <div class="tb-btn-buy tb-btn-sku">
-                      <button class="buy-btn" id="J_LinkBuy" title="点击此按钮，到下一步确认购买信息。">立即购买</button>
+                      <button (click)="buyNow()" class="buy-btn" id="J_LinkBuy" title="点击此按钮，到下一步确认购买信息。">立即购买</button>
                     </div>
                     <div class="tb-btn-basket tb-btn-sku">
                       <button class="into-cart-btn" id="J_LinkBasket" (click)="addToCart()">
