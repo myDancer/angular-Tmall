@@ -9,7 +9,7 @@
       </h1>
     </div>
     <div class="J_Order clearfix order-body">
-      <div class="order-content">
+      <div class="order-content" *ngFor="let item of cartList">
         <ul class="item-content clearfix">
           <li class="td td-chk">
             <div class="td-inner">
@@ -19,11 +19,11 @@
           <li class="td td-item">
             <div class="td-inner">
               <div class="item-pic">
-                <img src="https://img.alicdn.com/bao/uploaded/i3/3378587926/O1CN01WwFL6d28Q9jwkStM5_!!3378587926.jpg_80x80.jpg" alt="">
+                <img [src]="item.color.productImg" alt="">
               </div>
               <div class="item-info">
                 <div class="item-basic-info">
-                  <a class="item-title J_GoldReport J_MakePoint">【双品节价】夏季ins短袖男士宽松纯棉潮流t恤潮牌2020新款情侣装半袖衣服体恤</a>
+                  <a class="item-title J_GoldReport J_MakePoint">{{item.productDetail.title}}</a>
                 </div>
                 <div class="item-other-info"></div>
               </div>
@@ -31,28 +31,28 @@
           </li>
           <li class="td td-info">
             <div class="item-props item-props-can">
-              <p class="sku-line">颜色：T118白色</p>
-              <p class="sku-line">尺码：2XL[【时.尚帅气】]</p>
+              <p class="sku-line">颜色：{{item.color.name}}</p>
+              <p class="sku-line">尺码：{{item.size}}</p>
             </div>
           </li>
           <li class="td td-price">
             <div class="td-inner">
               <div class="item-price price-promo-">
                 <div class="price-content">
-                  <div class="price-line"><em class="price-original">￥299.00</em></div>
-                  <div class="price-line"><em class="J_Price price-now">￥49.90</em></div>
+                  <div class="price-line"><em class="price-original">￥{{item.productDetail.originalPrice}}</em></div>
+                  <div class="price-line"><em class="J_Price price-now">￥{{item.productDetail.price}}</em></div>
                 </div>
               </div>
             </div>
           </li>
           <li class="td td-amount">
             <div class="td-inner">
-              <input type="number" style="width: 50px;">
+              <input type="number" style="width: 50px;" [(ngModel)]="item.number">
             </div>
           </li>
           <li class="td td-sum">
             <div class="td-inner">
-              <em class="J_ItemSum number">￥49.90</em>
+              <em class="J_ItemSum number">￥{{item.productDetail.price * item.number}}</em>
             </div>
           </li>
         </ul>
@@ -62,14 +62,13 @@
       <div class="float-bar-right">
         <div class="amount-sum">
           <span class="txt">已选商品</span>
-          <em id="J_SelectedItemsCount">1</em>
+          <em id="J_SelectedItemsCount">{{cartList.length}}</em>
           <span class="txt">件</span>
         </div>
         <div class="price-sum">
           <span class="txt">合计（不含运费）：</span>
           <strong class="price">
             <em>
-
               <span class="total-symbol">0.00</span>
             </em>
           </strong>

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { CartService } from '../../../@core/mock/cart.service'
 
 @Component({
   selector: 'app-detail',
@@ -8,12 +9,17 @@ import { Router } from '@angular/router';
 })
 export class DetailComponent implements OnInit {
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, private cartService: CartService) { }
   productDetail = {
+    title: '立领衬衫男长袖衬衣春季薄款中山装花花公子新款中华立领商务正装',
+    price: 178,
+    originalPrice: 280,
+    commentNum: 2,
+    points: 89,
     sizes: [38, 39, 40, 41, 42, 43],
     colors: [
       {
-        productImg: '//img.alicdn.com/imgextra/i2/2269753886/TB2JIGEfl8lpuFjSspaXXXJKpXa_!!2269753886.jpg_40x40q90.jpg',
+        productImg: '//img.alicdn.com/imgextra/i2/2269753886/TB2JIGEfl8lpuFjSspaXXXJKpXa_!!2269753886.jpg',
         name: '5036立领藏青色'
       }
     ]
@@ -31,7 +37,10 @@ export class DetailComponent implements OnInit {
     console.log(this.cart);
   }
   addToCart() {
-    this.router.navigate(['/cart']);
+    if (this.cart.size !== '' && JSON.stringify(this.cart.color) !== '{}') {
+      this.cartService.addToCart({productDetail: this.productDetail, ...this.cart});
+      this.router.navigate(['/cart']);
+    }
   }
   checkSize(size) {
     console.log(size);
