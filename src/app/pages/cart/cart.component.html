@@ -39,8 +39,8 @@
             <div class="td-inner">
               <div class="item-price price-promo-">
                 <div class="price-content">
-                  <div class="price-line"><em class="price-original">￥{{item.productDetail.originalPrice}}</em></div>
-                  <div class="price-line"><em class="J_Price price-now">￥{{item.productDetail.price}}</em></div>
+                  <div class="price-line"><em class="price-original">{{item.productDetail.originalPrice | currency: '￥'}}</em></div>
+                  <div class="price-line"><em class="J_Price price-now">{{item.productDetail.price | currency: '￥'}}</em></div>
                 </div>
               </div>
             </div>
@@ -52,7 +52,7 @@
           </li>
           <li class="td td-sum">
             <div class="td-inner">
-              <em class="J_ItemSum number">￥{{item.productDetail.price * item.number}}</em>
+              <em class="J_ItemSum number">{{item.productDetail.price * item.number |  currency: '￥'}}</em>
             </div>
           </li>
         </ul>
