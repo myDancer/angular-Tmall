@@ -1,27 +1,24 @@
-# Jmall
+# angular-Tmall
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.23.
+## 基于Angular.js实现的，仿天猫商城PC端webapp
+用angular完全仿照Tmall
+部分数据使用service代替 ，部分接口使用node.js+express+mongodb
 
-## Development server
+## 技术栈
+- Angular.js: "^8.2.14"
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## 开发坏境启动
 
-## Code scaffolding
+1. `npm install`
+2. `ng serve -o`
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## 生产坏境部署
 
-## Build
+1. `npm run build`
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+2. 拷贝build文件夹至服务器即可
 
-## Running unit tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+##  接口
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+待完成
