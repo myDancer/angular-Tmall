@@ -2,6 +2,7 @@
 
 ## 基于Angular.js实现的，仿天猫商城PC端webapp
 用angular完全仿照Tmall
+
 部分数据使用service代替 ，部分接口使用node.js+express+mongodb
 
 ## 技术栈
