@@ -1,0 +1,9 @@
+/* You can add global styles to this file, and also import other style files */
+@import './assets/styles/icons.css';
+.clearfix:after{
+    content: '';
+    display: block;
+    clear: both;
+    height: 0;
+}
+ 

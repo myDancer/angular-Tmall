@@ -3,12 +3,11 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "jmall": {
+    "angular-Tmall": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
-          "style": "scss",
-          "spec": false
+          "style": "scss"
         },
         "@schematics/angular:class": {
           "style": "scss",
@@ -39,7 +38,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/jmall",
+            "outputPath": "dist/angular-Tmall",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -50,7 +49,7 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.sass"
+              "src/styles.scss"
             ],
             "scripts": []
           },
@@ -89,18 +88,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "jmall:build"
+            "browserTarget": "angular-Tmall:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "jmall:build:production"
+              "browserTarget": "angular-Tmall:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "jmall:build"
+            "browserTarget": "angular-Tmall:build"
           }
         },
         "test": {
@@ -115,7 +114,7 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.sass"
+              "src/styles.scss"
             ],
             "scripts": []
           }
@@ -137,15 +136,15 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "jmall:serve"
+            "devServerTarget": "angular-Tmall:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "jmall:serve:production"
+              "devServerTarget": "angular-Tmall:serve:production"
             }
           }
         }
       }
     }},
-  "defaultProject": "jmall"
+  "defaultProject": "angular-Tmall"
 }
