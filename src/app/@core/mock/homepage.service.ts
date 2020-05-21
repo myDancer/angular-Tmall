@@ -1,12 +1,18 @@
 import { Injectable } from '@angular/core';
 import { DiscoverGoods } from '../data/discover-goods';
+import { HttpClient } from '@angular/common/http';
 import { Product, User, Goods } from '../data/product';
 
 @Injectable({
   providedIn: 'root'
 })
 export class HomepageService {
-constructor() { }
+constructor(private http: HttpClient) {
+
+}
+getHomeData() {
+  return this.http.get('http://localhost:8001/home/getHomeData');
+}
 getBeautyList(): Product[] {
   return [
     {id: '1', productImg: 'https://gw.alicdn.com/bao/uploaded/i1/2917719603/O1CN01OZpyX82KoDzJxOkA6_!!2917719603.jpg', name: '妮维雅男士沐浴露动能冰爽沐浴露250ml清凉舒爽德国进口沐浴乳露', price: 23.9, describe: '', publisherId: ''},

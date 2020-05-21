@@ -6,19 +6,19 @@
   </h3>
   <ul class="goods-list">
     <li routerLink="/goodsDetail" *ngFor="let item of data.goods">
-      <div class="img-wrapper"><img [src]="item.img" alt="" srcset=""></div>
-      <div class="info" *ngIf="data.type == 0">
+      <div class="img-wrapper"><img [src]="item.productImg+'_180x180xzq90.jpg_.webp'" alt="" srcset=""></div>
+      <div class="info">
         <h4>{{item.name}}</h4>
         <p>{{item.describe}}</p>
         <p class="extra">{{item.extra}}人说好</p>
       </div>
-      <div class="info" *ngIf="data.type == 1">
+      <!-- <div class="info" *ngIf="data.title == '爱逛街'">
         <p class="subtitle">{{item.name}}</p>
         <div class="extra">
           <div class="pic-wrapper"><img [src]="item.avatar" alt=""></div>
           <p class="name">{{item.username}}</p>
         </div>
-      </div>
+      </div> -->
     </li>
     
   </ul>

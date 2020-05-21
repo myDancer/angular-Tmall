@@ -9,15 +9,19 @@ import { HomepageService } from '../../@core/mock/homepage.service';
 export class HomeComponent implements OnInit {
   discoverGoods: any;
   brandList: any;
-  beautyList: any;
+  beauty: any;
+  navLinks: any;
   constructor(private homepageService: HomepageService) {
-    this.discoverGoods = this.homepageService.getDiscoverGoods();
-    this.brandList = this.homepageService.getBrandList();
-    this.beautyList = this.homepageService.getBeautyList();
-    console.log(this.discoverGoods);
+    
   }
 
   ngOnInit() {
+    this.homepageService.getHomeData().subscribe( (data: any) => {
+      this.discoverGoods = data.discover;
+      this.brandList = data.brands;
+      this.beauty = data.beauty;
+      this.navLinks = data.navLinks;
+    })
   }
 
 }

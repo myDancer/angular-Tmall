@@ -17,8 +17,7 @@ export class ProductDetailComponent implements OnInit {
 
   getProduct(): void {
     const id = this.route.snapshot.paramMap.get('id');
-    console.log(id);
-    this.productService.getProduct(id)
+    this.productService.getProductDetailById(id)
       .subscribe(product => this.product = product);
   }
 }

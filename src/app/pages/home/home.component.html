@@ -61,15 +61,15 @@
     <div class="beauty-body">
       <div class="big-banner-con-2">
         <a>
-          <img src="https://img.alicdn.com/tfs/TB1FjatDUT1gK0jSZFhXXaAtVXa-468-1236.jpg" alt="">
+          <img [src]="beauty.bigBanner.productImg" alt="">
           <div class="banner-detail">
             <div class="left-title-wrap">
-              <span class="left-title">大牌男装</span>
+              <span class="left-title">{{beauty.bigBanner.leftTitle}}</span>
             </div>
             <div class="right-title-wrap">
               <div class="right-title-absolute">
-                <span class="right-title">潮牌首发</span>
-                <span class="right-title">联名潮T不只4折</span>
+                <span class="right-title">{{beauty.bigBanner.rightTitle}}</span>
+                <span class="right-title">{{beauty.bigBanner.rightSubTitle}}</span>
               </div>
             </div>
           </div>
@@ -79,7 +79,7 @@
         </a>
       </div>
       <div class="middle-column-con">
-        <a *ngFor="let item of beautyList" [routerLink]="'/productDetail/'+item.id">
+        <a *ngFor="let item of beauty.list" [routerLink]="'/productDetail/'+item.id">
           <div class="floor-item-content-wrap">
             <img class="floor-item-img" [src]="item.productImg" alt="">
             <div class="floor-item-title">{{item.name}}</div>

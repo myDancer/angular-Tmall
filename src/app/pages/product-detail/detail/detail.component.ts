@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Router } from '@angular/router';
 import { CartService } from '../../../@core/mock/cart.service'
 
@@ -8,7 +8,7 @@ import { CartService } from '../../../@core/mock/cart.service'
   styleUrls: ['./detail.component.scss']
 })
 export class DetailComponent implements OnInit {
-
+  @Input() product: any;
   constructor(private router: Router, private cartService: CartService) { }
   productDetail = {
     title: '立领衬衫男长袖衬衣春季薄款中山装花花公子新款中华立领商务正装',
@@ -34,6 +34,7 @@ export class DetailComponent implements OnInit {
   ngOnInit() {
   }
   buyNow() {
+    console.log(this.product);
     console.log(this.cart);
   }
   addToCart() {

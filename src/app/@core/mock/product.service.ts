@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { of,  Observable } from 'rxjs';
-
+import { HttpClient } from '@angular/common/http';
 import { productDetail } from '../data/product'
 
 @Injectable({
@@ -10,10 +10,12 @@ export class ProductService  extends productDetail{
 
   productDetail: any;
 
-  constructor() {
+  constructor(private http: HttpClient) {
     super();
   }
-
+  getProductDetailById (id){
+    return this.http.get('http://localhost:8001/product/getProductDetailById?id=' + id);
+  }
   getProductDetail(id: string) {
     return this.productDetail;
   }

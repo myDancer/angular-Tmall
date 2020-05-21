@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { SiteNavModule } from './pages/site-nav/site-nav.module';
@@ -23,6 +24,7 @@ import { CategoryComponent } from './pages/home/category/category.component';
     BrowserModule,
     AppRoutingModule,
     SiteNavModule,
+    HttpClientModule,
     // FormsModule,
     // ReactiveFormsModule
   ],
