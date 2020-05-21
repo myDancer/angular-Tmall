@@ -10,7 +10,6 @@ export class SiteNavComponent implements OnInit {
   navLinks = [];
   constructor(private homepageService: HomepageService) {
     this.navLinks = homepageService.getNavLinks();
-    console.log(this.navLinks);
   }
 
   ngOnInit() {

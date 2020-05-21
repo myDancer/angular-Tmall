@@ -31,8 +31,8 @@
           </li>
           <li class="td td-info">
             <div class="item-props item-props-can">
-              <p class="sku-line">颜色：{{item.color.name}}</p>
-              <p class="sku-line">尺码：{{item.size}}</p>
+              <p class="sku-line" *ngIf="item.color">颜色：{{item.color.name}}</p>
+              <p class="sku-line" *ngIf="item.size">尺码：{{item.size}}</p>
             </div>
           </li>
           <li class="td td-price">

@@ -4,11 +4,11 @@
       <div class="tm-clear">
         <div class="tb-property">
           <div class="tb-wrap">
-            <div class="tb-detail-hd"><h1>{{product.name}}</h1></div>
+            <div class="tb-detail-hd"><h1 *ngIf="product">{{product.name}}</h1></div>
             <div class="tm-fcs-panel">
               <dl class="tm-price-panel tm-price-cur" id="J_StrPriceModBox">
                 <dt class="tb-metatit">价格</dt>
-                <dd><em class="tm-yen">¥ </em><span class="tm-price">{{product.price}}</span></dd>
+                <dd><em class="tm-yen">¥ </em><span class="tm-price" *ngIf="product">{{product.price}}</span></dd>
               </dl>
             </div>
             <div class="tb-meta">
@@ -36,22 +36,22 @@
             <div class="tb-key">
               <div class="tb-skin">
                 <div class="tb-sku">
-                  <dl class="tb-prop tm-sale-prop tm-clear" *ngIf="product.sizes.length > 0">
+                  <dl class="tb-prop tm-sale-prop tm-clear" *ngIf="product && product.sizes.length > 0">
                     <dt class="tb-metatit">尺码</dt>
                     <dd>
                       <ul class="tm-clear J_TSaleProp">
-                        <li *ngFor="let item of productDetail.sizes; index as i">
+                        <li *ngFor="let item of product.sizes; index as i">
                           <button (click)="chooseSize(item)" [ngClass]="{'choose-btn': true, 'check': i == chooseIndex}" type="button">{{item}}</button>
                         </li>
                       </ul>
                     </dd>
                   </dl>
-                  <dl class="tb-prop tm-sale-prop tm-clear tm-img-prop" *ngIf="product.colors.length > 0">
+                  <dl class="tb-prop tm-sale-prop tm-clear tm-img-prop" *ngIf="product && product.colors.length > 0">
                     <dt class="tb-metatit">颜色</dt>
                     <dd>
                       <ul class="tm-clear J_TSaleProp tb-img">
                         <li *ngFor="let item of product.colors; index as i">
-                          <button (click)="chooseColor(item)" [ngClass]="{'color-choose-btn': true, 'check': i == chooseColorIndex}" [ngStyle]="{'background-image': 'url(' + item.productImg + '_40x40q90.jpg)'}">{{item.name}}</button>
+                          <button (click)="chooseColor(item)" [ngClass]="{'color-choose-btn': true, 'check': i == chooseColorIndex}" [ngStyle]="{'background-image': 'url(' + item.productImg + '_40x40q90.jpg)'}" [title]="item.name">{{item.name}}</button>
                         </li>
                       </ul>
                     </dd>
@@ -84,31 +84,19 @@
             </div>
           </div>
         </div>
-        <div class="tb-gallery">
+        <div class="tb-gallery" *ngIf="product">
           <div class="tb-booth">
             <span class="zoomIcon"></span>
             <span class="ks-imagezoom-wrap">
-              <img [src]="product.productImg" alt="">
-              <span class="ks-imagezoom-lens"></span>
+              <img [src]="product.productImg+ '_430x430q90.jpg'" alt="">
+              <!-- <span class="ks-imagezoom-lens"></span> -->
             </span>
           </div>
           <div class="tb-thumb-warp">
             <div class="tb-thumb-content">
               <ul  class="tb-thumb tm-clear">
                 <li class="tb-selected">
-                  <img [src]="item.productImg+ '__430x430xzq90.jpg_.webp'" alt="">
-                </li>
-                <li>
-                  <img src="https://img.alicdn.com/imgextra/i1/2269753886/O1CN01PBuUpd1eZphrzNkMo_!!2269753886-0-pixelsss.jpg_60x60q90.jpg" alt="">
-                </li>
-                <li>
-                  <img src="https://img.alicdn.com/imgextra/i1/2269753886/O1CN01PBuUpd1eZphrzNkMo_!!2269753886-0-pixelsss.jpg_60x60q90.jpg" alt="">
-                </li>
-                <li>
-                  <img src="https://img.alicdn.com/imgextra/i1/2269753886/O1CN01PBuUpd1eZphrzNkMo_!!2269753886-0-pixelsss.jpg_60x60q90.jpg" alt="">
-                </li>
-                <li>
-                  <img src="https://img.alicdn.com/imgextra/i1/2269753886/O1CN01PBuUpd1eZphrzNkMo_!!2269753886-0-pixelsss.jpg_60x60q90.jpg" alt="">
+                  <img [src]="product.productImg+ '_60x60q90.jpg'" alt="">
                 </li>
               </ul>
             </div>

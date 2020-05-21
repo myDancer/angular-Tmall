@@ -12,7 +12,6 @@ export class HomeComponent implements OnInit {
   beauty: any;
   navLinks: any;
   constructor(private homepageService: HomepageService) {
-    
   }
 
   ngOnInit() {
@@ -21,7 +20,7 @@ export class HomeComponent implements OnInit {
       this.brandList = data.brands;
       this.beauty = data.beauty;
       this.navLinks = data.navLinks;
-    })
+    });
   }
 
 }

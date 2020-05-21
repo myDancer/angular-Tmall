@@ -59,7 +59,7 @@
   <div class="beauty">
     <h2 class="beauty-title"><span>美丽人生</span><span class="en">FASHION & BEAUTY</span></h2>
     <div class="beauty-body">
-      <div class="big-banner-con-2">
+      <div class="big-banner-con-2" *ngIf="beauty && beauty.bigBanner">
         <a>
           <img [src]="beauty.bigBanner.productImg" alt="">
           <div class="banner-detail">
@@ -78,7 +78,7 @@
           </div>
         </a>
       </div>
-      <div class="middle-column-con">
+      <div class="middle-column-con" *ngIf="beauty">
         <a *ngFor="let item of beauty.list" [routerLink]="'/productDetail/'+item.id">
           <div class="floor-item-content-wrap">
             <img class="floor-item-img" [src]="item.productImg" alt="">
@@ -91,7 +91,7 @@
   </div>
 </div>
 <div class="layer">
-  <div class="layer-inner clearfix">
+  <div class="layer-inner clearfix" *ngIf="discoverGoods">
     <app-goods-card [data]="discoverGoods.good"></app-goods-card>
     <app-goods-card [data]="discoverGoods.random" class="right-card"></app-goods-card>
   </div>

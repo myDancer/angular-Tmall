@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Router } from '@angular/router';
-import { CartService } from '../../../@core/mock/cart.service'
+import { CartService } from '../../../@core/mock/cart.service';
 
 @Component({
   selector: 'app-detail',
@@ -38,21 +38,24 @@ export class DetailComponent implements OnInit {
     console.log(this.cart);
   }
   addToCart() {
-    if (this.cart.size !== '' && JSON.stringify(this.cart.color) !== '{}') {
-      this.cartService.addToCart({productDetail: this.productDetail, ...this.cart});
-      this.router.navigate(['/cart']);
+    if ((this.product.sizes.length > 0 && this.cart.size === '')
+      ||
+     (this.product.colors.length > 0 && JSON.stringify(this.cart.color) === '{}')
+     ) {
+       return;
     }
+    this.cartService.addToCart({productDetail: this.productDetail, ...this.cart});
+    this.router.navigate(['/cart']);
   }
   checkSize(size) {
-    console.log(size);
     this.cart.size = size;
   }
   chooseSize(size) {
-    this.chooseIndex = this.productDetail.sizes.indexOf(size);
+    this.chooseIndex = this.product.sizes.indexOf(size);
     this.cart.size = size;
   }
   chooseColor(color) {
-    this.chooseColorIndex = this.productDetail.colors.indexOf(color);
+    this.chooseColorIndex = this.product.colors.indexOf(color);
     this.cart.color = color;
   }
 }
