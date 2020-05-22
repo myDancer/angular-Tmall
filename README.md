@@ -5,6 +5,8 @@
 
 部分数据使用service代替 ，部分接口使用node.js+express+mongodb
 
+完成了商品列表，搜索商品，商品详情，购物车等页面和交互
+
 ## 技术栈
 - Angular.js: "^8.2.14"
 
@@ -20,6 +22,6 @@
 2. 拷贝build文件夹至服务器即可
 
 
-##  接口
+##  后端接口地址
 
-待完成
+[https://github.com/myDancer/node-Tmall](https://github.com/myDancer/node-Tmall)
