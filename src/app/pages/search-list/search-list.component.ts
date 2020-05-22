@@ -18,5 +18,8 @@ export class SearchListComponent implements OnInit {
     this.productService.fuzzySearchByProductName(name)
       .subscribe((result: any) => this.productList = result.data);
   }
-
+  search (value) {
+    this.productService.fuzzySearchByProductName(value)
+      .subscribe((result: any) => this.productList = result.data);
+  }
 }

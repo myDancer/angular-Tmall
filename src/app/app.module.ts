@@ -4,7 +4,7 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { SiteNavModule } from './pages/site-nav/site-nav.module';
-// import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HeaderModule } from './pages/home/header/header.module';
 
 import { AppComponent } from './app.component';
@@ -25,8 +25,8 @@ import { CategoryComponent } from './pages/home/category/category.component';
     SiteNavModule,
     HttpClientModule,
     HeaderModule,
-    // FormsModule,
-    // ReactiveFormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

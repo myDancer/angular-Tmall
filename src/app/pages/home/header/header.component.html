@@ -1,11 +1,14 @@
 <div class="search-wrapper">
   <div class="search">
-    <img class="logo-con" src="https://img.alicdn.com/tfs/TB1MaLKRXXXXXaWXFXXXXXXXXXX-480-260.png" alt="">
+    <a routerLink="/home" class="logo-con">
+      <img width="100%" height="100%" src="https://img.alicdn.com/tfs/TB1MaLKRXXXXXaWXFXXXXXXXXXX-480-260.png" alt="">
+    </a>
     <div class="mall-search">
       <div class="mall-search-input">
-        <input #searchInput (keyup.enter)="search(searchInput.value)" (input)="textChange($event)" id="searchInput" type="text"/>
-        <label *ngIf="showLabel" class="placeholder" for="searchInput">搜索 天猫 商品/品牌/店铺</label>
+        <input #searchInput (keyup.enter)="search(searchInput.value)" [(ngModel)]="searchText" id="searchInput" type="text"/>
+        <label *ngIf="searchText.length == 0" class="placeholder" for="searchInput">搜索 天猫 商品/品牌/店铺</label>
       </div>
+      
       <button (click)="search(searchInput.value)" class="search-btn">搜索</button>
     </div>
   </div>

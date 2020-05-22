@@ -1,4 +1,4 @@
-import { Component, OnInit, EventEmitter, Output } from '@angular/core';
+import { Component, OnInit, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-home-header',
@@ -6,21 +6,19 @@ import { Component, OnInit, EventEmitter, Output } from '@angular/core';
   styleUrls: ['./header.component.sass']
 })
 export class HeaderComponent implements OnInit {
+  @Input() defaulttext: string;
   @Output() onsearch = new EventEmitter<boolean>();
 
-  showLabel = true;
-  searchText: string;
+  searchText = '';
   constructor() { }
 
   ngOnInit() {
-  }
-  textChange(event: KeyboardEvent) {
-    this.searchText =  (event.target as HTMLInputElement).value;
-    if (this.searchText.length > 0) {
-      this.showLabel = false;
-    } else {
-      this.showLabel = true;
+    if (this.defaulttext) {
+      this.searchText = this.defaulttext;
     }
+  }
+  ngOnChanges (change) {
+    console.log('change')
   }
   search(value) {
     this.onsearch.emit(value);
