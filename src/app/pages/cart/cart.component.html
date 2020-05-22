@@ -13,7 +13,7 @@
         <ul class="item-content clearfix">
           <li class="td td-chk">
             <div class="td-inner">
-              <input type="checkbox" style="float: right;margin-right: 10px;">
+              <input type="checkbox" (change)="checkBoxChange($event, item)" style="float: right;margin-right: 10px;">
             </div>
           </li>
           <li class="td td-item">
@@ -23,7 +23,7 @@
               </div>
               <div class="item-info">
                 <div class="item-basic-info">
-                  <a class="item-title J_GoldReport J_MakePoint">{{item.productDetail.title}}</a>
+                  <a class="item-title J_GoldReport J_MakePoint">{{item.productDetail.name}}</a>
                 </div>
                 <div class="item-other-info"></div>
               </div>
@@ -62,19 +62,19 @@
       <div class="float-bar-right">
         <div class="amount-sum">
           <span class="txt">已选商品</span>
-          <em id="J_SelectedItemsCount">{{cartList.length}}</em>
+          <em id="J_SelectedItemsCount">{{selectedList.length}}</em>
           <span class="txt">件</span>
         </div>
         <div class="price-sum">
           <span class="txt">合计（不含运费）：</span>
           <strong class="price">
             <em>
-              <span class="total-symbol">0.00</span>
+              <span class="total-symbol">{{ sum }}</span>
             </em>
           </strong>
         </div>
         <div class="btn-area">
-          <button class="submit-btn submit-btn-disabled">结算</button>
+          <button (click)="removeCarts()" [ngClass]="{'submit-btn': true, 'submit-btn-disabled': selectedList.length == 0}">结算</button>
         </div>
       </div>
     </div>

@@ -16,6 +16,9 @@ export class ProductService  extends productDetail{
   getProductDetailById (id){
     return this.http.get('http://localhost:8001/product/getProductDetailById?id=' + id);
   }
+  fuzzySearchByProductName (name){
+    return this.http.get('http://localhost:8001/product/fuzzySearchByProductName?name=' + name);
+  }
   getProductDetail(id: string) {
     return this.productDetail;
   }

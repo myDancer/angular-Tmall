@@ -6,7 +6,7 @@
         <input #searchInput (keyup.enter)="search(searchInput.value)" (input)="textChange($event)" id="searchInput" type="text"/>
         <label *ngIf="showLabel" class="placeholder" for="searchInput">搜索 天猫 商品/品牌/店铺</label>
       </div>
-      <button class="search-btn">搜索</button>
+      <button (click)="search(searchInput.value)" class="search-btn">搜索</button>
     </div>
   </div>
 </div>

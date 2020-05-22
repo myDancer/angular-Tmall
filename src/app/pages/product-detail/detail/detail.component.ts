@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 import { CartService } from '../../../@core/mock/cart.service';
 
 @Component({
@@ -9,7 +9,7 @@ import { CartService } from '../../../@core/mock/cart.service';
 })
 export class DetailComponent implements OnInit {
   @Input() product: any;
-  constructor(private router: Router, private cartService: CartService) { }
+  constructor(private router: Router, private route: ActivatedRoute, private cartService: CartService) { }
   productDetail = {
     title: '立领衬衫男长袖衬衣春季薄款中山装花花公子新款中华立领商务正装',
     price: 178,
@@ -44,8 +44,11 @@ export class DetailComponent implements OnInit {
      ) {
        return;
     }
-    this.cartService.addToCart({productDetail: this.productDetail, ...this.cart});
-    this.router.navigate(['/cart']);
+    const id = this.route.snapshot.paramMap.get('id');
+    this.cartService.addToCart({productId: id, productDetail: this.productDetail, ...this.cart}).subscribe((result: any) => {
+      console.log(result);
+      this.router.navigate(['/cart']);
+    });
   }
   checkSize(size) {
     this.cart.size = size;

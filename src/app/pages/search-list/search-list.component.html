@@ -1,0 +1,19 @@
+<app-site-nav></app-site-nav>
+<app-home-header></app-home-header>
+<div class="layer clearfix">
+  <a *ngFor="let item of productList" [routerLink]="'/productDetail/'+item.id">
+    <div class="floor-item-content-wrap">
+      <img class="floor-item-img" [src]="item.productImg" alt="">
+      <div class="floor-item-title">{{item.name}}</div>
+      <div class="floor-price">￥{{item.price}}</div>
+    </div>
+  </a>
+  <!-- <a [routerLink]="'/productDetail/'+item.id">
+    <div class="floor-item-content-wrap">
+      <img class="floor-item-img" src="https://img.alicdn.com/tfs/TB1tqpnegMPMeJjy1XcXXXpppXa-148-48.png" alt="">
+      <div class="floor-item-title">"潮牌余文乐简约纯色连帽卫衣男女ulzzang韩版宽松套头抓绒外套男"</div>
+      <div class="floor-price">￥21</div>
+    </div>
+  </a> -->
+
+</div>

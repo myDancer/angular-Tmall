@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HomepageService } from '../../@core/mock/homepage.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -11,7 +12,7 @@ export class HomeComponent implements OnInit {
   brandList: any;
   beauty: any;
   navLinks: any;
-  constructor(private homepageService: HomepageService) {
+  constructor(private homepageService: HomepageService, private router: Router) {
   }
 
   ngOnInit() {
@@ -22,5 +23,7 @@ export class HomeComponent implements OnInit {
       this.navLinks = data.navLinks;
     });
   }
-
+  search (value) {
+    this.router.navigate(['search'], {queryParams: {name :encodeURI(value)}});
+  }
 }
