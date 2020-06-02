@@ -22,7 +22,7 @@ export class DetailComponent implements OnInit {
   chooseColorIndex: number;
   cart = {
     number: 1,
-    size: '',
+    size: 0,
     color: {}
   };
   ngOnInit() {
@@ -33,15 +33,15 @@ export class DetailComponent implements OnInit {
   addToCart() {
     this.router.navigate(['/cart']);
   }
-  checkSize(size) {
+  checkSize(size: number): void {
     console.log(size);
     this.cart.size = size;
   }
-  chooseSize(size) {
+  chooseSize(size: number): void {
     this.chooseIndex = this.productDetail.sizes.indexOf(size);
     this.cart.size = size;
   }
-  chooseColor(color) {
+  chooseColor(color): void {
     this.chooseColorIndex = this.productDetail.colors.indexOf(color);
     this.cart.color = color;
   }
